@@ -4,19 +4,6 @@ import sys
 import os
 os.system("color 0b")
 
-print ("   ")
-print ("   ")
-print ("   ")
-print ("############################################################################")
-print ("#Googledmusics sexy version                                                #")
-print ("#This is a Special bot for googledmusic                                    #")
-print ("#If u don't know how this work pm me                                       #")
-print ("#Discord link https://discord.gg/k9Qsxt                                    #")
-print ("#don't leak this or u stupid lol                                           #")
-print ("############################################################################")
-print ("   ")
-print ("   ")
-
 class RobloxBot:
 	
 	def __init__(self, group_id):
@@ -24,14 +11,12 @@ class RobloxBot:
 		self.session = requests.session()
 		self.session.headers.update(self.headers)
 		self.group_id = group_id
-		if requests.get('https://pastebin.com/raw/xxzsCPH2').text != 'If you are looking at this you are a skid from visilex':
-			sys.exit('Unable to connect')
 
 	def login(self, username, password):
-		print('playing music')
+		print('logging in ... please wait')
 		payload = {'username': username, 'password': password}
 		self.session.post('https://www.roblox.com/newlogin', data=payload)
-		print('played music')
+		print('logged in')
 
 	def get_shirts(self, starting_page=66, category='12', wait=10):
 		page_num = starting_page
@@ -92,6 +77,6 @@ class RobloxBot:
 		print('Successfull'.format(assetId))
 
 if __name__ == '__main__':
-	bot = RobloxBot(group_id='3815292')
-	bot.login(username='GoogledMusicYT', password='googledishot')
-	bot.get_shirts(starting_page=1, category='14', wait=3)
+	bot = RobloxBot(group_id = 'group_id')
+	bot.login(username = 'username', password = 'password')
+	bot.get_shirts(starting_page = 1, category = '14', wait = 3)
