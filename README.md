@@ -80,5 +80,9 @@ To run a script, execute it from your terminal:
 ```bash
 python shirt.py
 ```
+OR
+```bash
+python "shirts expensive.py"
+```
 
 The script will print its progress to the console, including login status, status errors, and successful uploads.
